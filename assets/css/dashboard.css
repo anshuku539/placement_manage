@@ -1,0 +1,414 @@
+/* Dashboard Layout & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f5f7fb;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-content {
+    margin-left: 260px;
+}
+
+.card {
+    border-radius: 12px;
+}
+
+.card h4 {
+    font-size: 22px;
+}
+
+.card-header {
+    padding: 18px 25px;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.btn {
+    border-radius: 8px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    background: #438af5;
+    overflow-y: auto;
+}
+
+.sidebar-profile {
+    text-align: center;
+    padding: 10px 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, .15);
+}
+
+.sidebar-profile img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, .30);
+    margin-bottom: 15px;
+    background: #fff;
+}
+
+.sidebar-profile h5 {
+    color: #fff;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.sidebar-profile p {
+    color: rgba(255, 255, 255, .80);
+    margin: 0;
+    font-size: 14px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.sidebar-menu li {
+    margin: 5px 0;
+}
+
+.sidebar-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 25px;
+    color: #fff;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.sidebar-menu li a.active {
+    background: #ffffff;
+    color: #0d6efd;
+    font-weight: 600;
+    border-left: 4px solid #0a58ca;
+}
+
+.sidebar-menu li a.active i {
+    color: #0d6efd;
+}
+
+.sidebar-menu li a:hover {
+    background: rgba(251, 0, 0, 0.967);
+}
+
+/* Offcanvas Mobile Sidebar */
+.offcanvas {
+    width: 260px;
+}
+
+.offcanvas .sidebar-profile {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.offcanvas .sidebar-profile img {
+    border-color: #dee2e6;
+}
+
+.offcanvas .sidebar-profile h5 {
+    color: #212529;
+}
+
+.offcanvas .sidebar-profile p {
+    color: #6c757d;
+}
+
+.offcanvas .sidebar-menu li a {
+    color: #212529;
+}
+
+.offcanvas .sidebar-menu li a:hover {
+    background: #f1f3f5;
+}
+
+/* Topbar Styles */
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    height: 70px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+}
+
+.topbar h4 {
+    margin-bottom: 5px;
+}
+
+.topbar p {
+    margin: 0;
+    color: #6c757d;
+}
+
+.topbar>div:first-child {
+    display: flex;
+    align-items: center;
+}
+
+.topbar>div:last-child {
+    margin-left: auto;
+}
+
+.profile-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #212529;
+    cursor: pointer;
+}
+
+.profile-dropdown::after {
+    display: none !important;
+}
+
+.profile-dropdown img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-dropdown:hover {
+    color: #0d6efd;
+}
+
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .12);
+    border-radius: 10px;
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+    transition: .3s;
+    height: 100%;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #eaf2ff;
+    color: #0d6efd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.dashboard-card h6 {
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+.dashboard-card h4 {
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Profile Styles */
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #dee2e6;
+}
+
+/* Job Cards & Job Details */
+.card h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+.card .btn {
+    margin-right: 10px;
+}
+
+.card-header h3 {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.card-body strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #0d6efd;
+}
+
+.card-body p {
+    margin-bottom: 20px;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Applications Table */
+.table th {
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.badge {
+    padding: 8px 12px;
+    font-size: 13px;
+}
+
+/* Notifications Styles */
+.notification-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background: #fff;
+}
+
+.notification-item.unread {
+    border-left: 5px solid #0d6efd;
+    background: #f8fbff;
+}
+
+.notification-item h5 {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.notification-item p {
+    margin-bottom: 8px;
+    color: #6c757d;
+}
+
+.notification-item small {
+    color: #999;
+}
+
+/* Media Queries (Responsive) */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 220px;
+    }
+
+    .main-content {
+        margin-left: 220px;
+    }
+}
+
+@media (max-width: 991px) {
+    .main-content {
+        margin-left: 0;
+    }
+
+    .topbar {
+        padding: 15px 20px;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .topbar h5 {
+        font-size: 18px;
+    }
+
+    .topbar small {
+        font-size: 13px;
+    }
+
+    .profile-dropdown {
+        gap: 8px;
+    }
+
+    .profile-dropdown span {
+        display: none;
+    }
+
+    .profile-dropdown img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .topbar {
+        padding: 20px;
+    }
+
+    .notification-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .topbar {
+        padding: 12px 15px;
+    }
+
+    .topbar h5 {
+        font-size: 16px;
+        margin-bottom: 3px;
+    }
+
+    .topbar small {
+        font-size: 12px;
+    }
+
+    .profile-dropdown img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .topbar .btn {
+        padding: 6px 10px;
+    }
+}

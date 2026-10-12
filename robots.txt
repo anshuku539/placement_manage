@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Disallow restricted directories and portals
+Disallow: /admin/
+Disallow: /student/
+Disallow: /company/
+Disallow: /includes/
+Disallow: /database/
+Disallow: /uploads/
+Disallow: /assets/uploads/
+
+# Sitemap location
+Sitemap: https://your-domain.com/sitemap.xml

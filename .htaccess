@@ -1,0 +1,19 @@
+# Disable directory browsing
+Options -Indexes
+
+# Custom Error Pages
+ErrorDocument 404 /Placement_manage/404.php
+ErrorDocument 403 /Placement_manage/403.php
+ErrorDocument 500 /Placement_manage/500.php
+
+# Protect sensitive files
+<FilesMatch "^(\.env|\.git|\.gitignore|.*\.sql)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Proper MIME types
+<IfModule mod_mime.c>
+    AddType image/svg+xml .svg .svgz
+    AddType application/manifest+json .webmanifest .json
+</IfModule>
